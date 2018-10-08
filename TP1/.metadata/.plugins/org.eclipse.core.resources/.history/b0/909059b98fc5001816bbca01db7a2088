@@ -1,0 +1,36 @@
+import org.uncommons.watchmaker.framework.operators.AbstractCrossover;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class MyCrossover extends AbstractCrossover<double[]> {
+    protected MyCrossover() {
+        super(1);
+    }
+
+    protected List<double[]> mate(double[] p1, double[] p2, int i, Random random) {
+        ArrayList<double[]> children = new ArrayList();
+
+        
+        // your implementation:
+
+        int min = Math.min(p1.length, p2.length);
+        int max = Math.max(p1.length, p2.length);
+        int myRandom = random.nextInt(min);
+        double[] child1 = new double[max];
+        double[] child2 = new double[max];
+        for(int index = 0 ; index < myRandom; index ++) {
+        	child1[index] = p1[index];
+        	child2[index] = p1[index];
+        }
+        for(int index = myRandom; index < max; index++) {
+        	child1[index] = p2[index];
+        	child1[index] = p1[index];
+        }
+        
+        children.add(child1);
+        children.add(child1);
+        return children;
+    }
+}

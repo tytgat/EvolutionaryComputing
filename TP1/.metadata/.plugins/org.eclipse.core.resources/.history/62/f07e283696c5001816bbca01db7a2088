@@ -1,0 +1,39 @@
+import org.uncommons.watchmaker.framework.EvolutionaryOperator;
+
+import java.util.List;
+import java.util.Random;
+
+public class MyMutation implements EvolutionaryOperator<double[]> {
+    public List<double[]> apply(List<double[]> population, Random random) {
+        // initial population
+        // need to change individuals, but not their number!
+
+        // your implementation:
+    	for(double[] individual : population) {
+    		for(int i = 0 ; i < individual.length; i++) {
+    			//Uniform
+    			//individual[i] = (random.nextDouble() * 10) - 5;
+    			
+    			//Boundary
+    			/*if(random.nextDouble() > 0.5) {
+    				individual[i] = 5;
+    			}
+    			else {
+    				individual[i] = -5;
+    			}*/
+    			
+    			if(random.nextInt(individual.length) < 0) {
+    				//individual[i] = (random.nextDouble() * 10) - 5;
+    				individual[i] *= -1;
+    			}
+    			
+    			/*
+    			if(random.nextDouble() > 0.5) {
+    				individual[i] = (random.nextDouble() * 10) - 5;
+				}*/
+			}
+    	}
+        //result population
+        return population;
+    }
+}
