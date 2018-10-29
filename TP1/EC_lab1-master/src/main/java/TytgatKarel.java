@@ -19,7 +19,7 @@ public class TytgatKarel {
 
 	public static void main(String[] args) {
 		int dimension = 100; // dimension of problem
-		int populationSize = 100; // size of population
+		int populationSize = 1000; // size of population
 		int generations = 10000; // number of generations
 
 		Random random = new Random(); // random

@@ -37,7 +37,7 @@ public class MyMutation implements EvolutionaryOperator<double[]> {
 			}
 		}
 		generation++;
-		rate = Math.min(1.5, Math.max(0.1, 1 / Math.log((generation / 1000) + 1)));
+		rate = Math.min(1.5, Math.max(0.1, 1 / Math.log((generation / 100) + 1)));
 		// System.out.println(rate);
 		// result population
 		return population;
