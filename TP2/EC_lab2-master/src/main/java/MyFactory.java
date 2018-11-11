@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 import org.uncommons.watchmaker.framework.factories.AbstractCandidateFactory;
@@ -11,10 +14,16 @@ public class MyFactory extends AbstractCandidateFactory<double[]> {
 	}
 
 	public double[] generateRandomCandidate(Random random) {
-		double[] solution = new double[dimension];
-		// x from -5.0 to 5.0
+		List<Double> solutionLst = new ArrayList<Double>();
+		for (int i = 0; i < dimension; i++) {
+			solutionLst.add((double) i);
+		}
+		Collections.shuffle(solutionLst);
 
-		// your implementation:
+		double[] solution = new double[dimension];
+		for (int i = 0; i < dimension; i++) {
+			solution[i] = solutionLst.get(i);
+		}
 
 		return solution;
 	}
