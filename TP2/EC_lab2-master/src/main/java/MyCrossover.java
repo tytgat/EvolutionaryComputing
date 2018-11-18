@@ -38,7 +38,7 @@ public class MyCrossover extends AbstractCrossover<double[]> {
 			lstC2.add(null);
 		}
 
-		System.out.println("p :" + lstP1.toString() + " - " + lstP2.toString());
+		// System.out.println("p :" + lstP1.toString() + " - " + lstP2.toString());
 
 		double[] child1 = new double[dimention];
 		double[] child2 = new double[dimention];
@@ -70,7 +70,7 @@ public class MyCrossover extends AbstractCrossover<double[]> {
 			}
 		}
 
-		System.out.println("c :" + lstC1.toString() + " - " + lstC2.toString());
+		// System.out.println("c :" + lstC1.toString() + " - " + lstC2.toString());
 
 		// addList
 		for (int index = 0; index < p1.length; index++) {

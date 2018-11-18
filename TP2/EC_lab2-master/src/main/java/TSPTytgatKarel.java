@@ -24,9 +24,11 @@ import org.uncommons.watchmaker.framework.termination.GenerationCount;
 
 public class TSPTytgatKarel {
 
+	public static double[][] distanceMat;
+
 	public static void main(String[] args) {
 		HashMap<Integer, int[]> mapCitiesCoords = new HashMap<Integer, int[]>();
-		final double[][] distanceMat;
+
 		{
 			if (args.length <= 0) {
 				System.out.println("ERROR : Need the file path as argument of the program");
@@ -69,7 +71,7 @@ public class TSPTytgatKarel {
 		}
 
 		int dimension = mapCitiesCoords.size(); // number of cities
-		int populationSize = 10; // size of population
+		int populationSize = 1000; // size of population
 		int generations = 1000; // number of generations
 		Random random = new Random(); // random
 
