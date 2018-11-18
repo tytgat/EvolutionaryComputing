@@ -1,6 +1,0 @@
-INDEX VERSION 1.131+C:\Users\Chardon\Documents\AADoc\ITMO\Evolutionary computing\TP1\.metadata\.plugins\org.eclipse.jdt.core
-3996102163.index
-3610819667.index
-4206175468.index
-2489486469.index
-1116556056.index
