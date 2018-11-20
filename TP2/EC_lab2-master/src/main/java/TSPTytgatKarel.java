@@ -71,8 +71,8 @@ public class TSPTytgatKarel {
 		}
 
 		int dimension = mapCitiesCoords.size(); // number of cities
-		int populationSize = 1000; // size of population
-		int generations = 1000; // number of generations
+		int populationSize = 200; // size of population
+		int generations = 10000; // number of generations
 		Random random = new Random(); // random
 
 		CandidateFactory<double[]> factory = new MyFactory(dimension); // generation of solutions
